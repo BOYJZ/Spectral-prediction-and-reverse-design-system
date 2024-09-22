@@ -1,0 +1,16 @@
+project_folder/
+│
+├── data/                          # 用于存放生成的光谱数据
+│    └── fdtd_data.csv              # FDTD生成的1万条数据
+│
+├── models/                        # 用于存放训练好的模型
+│    └── forward_prediction_model.h5  # 保存的正向预测模型
+│    └── inverse_design_model.h5      # 保存的逆向设计模型
+│
+├── scripts/                       # 用于存放不同模块的代码
+│    └── generate_data.py            # 数据生成部分 (FDTD与Python联动)
+│    └── forward_model.py            # 正向预测模型构建与训练
+│    └── inverse_model.py            # 逆向设计模型构建与训练
+│    └── optimize_spectrum.py        # 对光谱进行优化和比较分析
+│
+└── main.py                        # 项目的主运行文件，调用不同模块
